@@ -50,8 +50,13 @@
        document.getElementById("repassErr").innerHTML = "Пароли не совпадают";
        valid = false;
      }
-     tg.close();
-     return valid;
+     if (valid == true){
+       tg.close();
+       return true;
+     }
+     else{
+      return false;
+     }
    }
  </script>
 </body>
