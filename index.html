@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>Регистрация ОЭК</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
-        
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        
-        body{
-            font-family:'Montserrat', sans-serif;
-            font-weight: 200;
-            color: var(--tg-theme-text-color);
-            background: var(--tg-theme-bg-color);
-        }
-        #main{
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        button{
-            border: 0;
-            border-radius: 5px;
-            margin-top: 50px;
-            height: 60px;
-            width: 200px;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 500ms easy;
-            color: var(--tg-theme-button-color);
-            background: var(--tg-theme-button-text-color);
-        }
-        button:hover{
-            background: var(--tg-theme-secondary-bg-color);
-        }
-    </style>
-        
+  <meta charset="UTF-8">
+  <title>CodePen - Finance Mobile Application-UX/UI Design Screen One</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <div id="main">
-        <form id="reg_form">
-            <input type="text" placeholder="Имя пользователя" id="user_name">
-            <input type="password" placeholder="Пароль" id="password">
-            <input type="password" placeholder="Повторите пароль" id="repassword">
-            <button id="send_reg">Зарегистрироваться</button>
-        </form>
-     </div>
-     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-      <script>
-          let tg = window.Telegram.WebApp;
-          let reg = document.getElementById("send_reg");
-          reg.addEventListener("click", () => {
-              tg.close();
-          }); 
-      </script>
+<!-- partial:index.partial.html -->
+<div class="screen-1">
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="100" viewbox="0 0 640 480" xml:space="preserve">
+
+  </svg>
+  <div class="email">
+    <label for="email">Имя пользователя</label>
+    <div class="sec-2">
+      <ion-icon name="mail-outline"></ion-icon>
+      <input type="email" name="email" placeholder="Username"/>
+    </div>
+  </div>
+  <div class="password">
+    <label for="password">Пароль</label>
+    <div class="sec-2">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <input class="pas" type="password" name="password" placeholder="············"/>
+      <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+    </div>
+    <label for="password">Повторить пароль</label>
+    <div class="sec-2">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <input class="pas" type="password" name="password" placeholder="············"/>
+      <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+    </div>
+  </div>
+  <button class="login">Зарегистрироваться</button>
+</div>
+<!-- partial -->
 </body>
 </html>
