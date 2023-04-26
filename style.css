@@ -13,7 +13,7 @@ body{
   background: #4070f4;
 }
 .wrapper{
-  position: relative;
+  position: inherit;
   max-width: 430px;
   width: 100%;
   background: #fff;
@@ -38,7 +38,7 @@ body{
   background: #4070f4;
 }
 .wrapper form{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .wrapper form .input-box{
   height: 52px;
@@ -72,14 +72,14 @@ form h3{
   margin-left: 10px;
 }
 .input-box.button input{
-  color: #fff;
+  color: var(--tg-theme-button-text-color);
   letter-spacing: 1px;
   border: none;
-  background: #4070f4;
+  background: var(--tg-theme-button-color);
   cursor: pointer;
 }
 .input-box.button input:hover{
-  background: #0e4bf1;
+  background: var(--tg-theme-secondary-bg-color);
 }
 form .text h3{
  color: #333;
