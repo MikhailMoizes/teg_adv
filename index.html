@@ -9,15 +9,19 @@
 <body>
   <div class="wrapper">
     <h2>Регистрация</h2>
-    <form action="#">
+    <form onsubmit="return validateForm()" action="" name="form">
       <div class="input-box">
-        <input type="text" placeholder="Введите имя пользователя" name="user_name" required>
+        <input type="text" placeholder="Введите имя пользователя"
+               name="user_name">
+        <div class="error" id="nameErr"></div>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Придумайте пароль"  name="password" required>
+        <input type="password" placeholder="Придумайте пароль"  name="password" >
+        <div class="error" id="passErr"></div>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Подтвердите пароль"  name="repassword" required>
+        <input type="password" placeholder="Подтвердите пароль"  name="repassword" >
+        <div class="error" id="repassErr"></div>
       </div>
       <div class="input-box button">
         <input type="Submit"  value="Зарегистрироваться"  name="send_reg">
@@ -26,26 +30,29 @@
   </div>
  <script src="https://telegram.org/js/telegram-web-app.js"></script>
  <script>
+   function validateForm ( ) {
      let tg = window.Telegram.WebApp;
-     let reg = document.getElementByName("send_reg");
-     let user_name = document.getElementByName("user_name");
-     let password = document.getElementByName("password");
-     let repassword = document.getElementByName("repassword");
-     reg.addEventListener("click", () => {
-          if (user_name.value.trim() === "") {
-            alert("Введите имя пользователя");
-            user_name.focus();
-          }
-          else if(password.value.trim() === "") {
-            alert("Введите пароль");
-            password.focus();
-          }
-          else if(repassword.value.trim() === "") {
-            alert("Повторите пароль");
-            repassword.focus();
-          }
-          else {tg.close();}
-     }); 
- </script>            
+     valid = true;
+
+     if (document.form.user_name.value == "") {
+       document.getElementById("nameErr").innerHTML = "Введите имя пользователя";
+       valid = false;
+     }
+     if (document.form.password.value == "") {
+       document.getElementById("passErr").innerHTML = "Введите пароль";
+       valid = false;
+     }
+     if (document.form.repassword.value == "") {
+       document.getElementById("repassErr").innerHTML = "Повторите пароль";
+       valid = false;
+     }
+     if (document.form.repassword.value != document.form.password.value) {
+       document.getElementById("repassErr").innerHTML = "Пароли не совпадают";
+       valid = false;
+     }
+     tg.close();
+     return valid;
+   }
+ </script>
 </body>
 </html>
