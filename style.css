@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body{
   position: relative;
   max-width: 430px;
   width: 100%;
-  background: var(--tg-theme-bg-color);
+  background: #fff;
   padding: 34px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -25,7 +25,7 @@ body{
   position: relative;
   font-size: 22px;
   font-weight: 600;
-  color: var(--tg-theme-text-color);
+  color: #333;
 }
 .wrapper h2::before{
   content: '';
@@ -72,14 +72,14 @@ form h3{
   margin-left: 10px;
 }
 .input-box.button input{
-  color: var(--tg-theme-button-color);
+  color: #fff;
   letter-spacing: 1px;
   border: none;
-  background: var(--tg-theme-button-text-color);
+  background: #4070f4;
   cursor: pointer;
 }
 .input-box.button input:hover{
-  background: var(--tg-theme-secondary-bg-color);
+  background: #0e4bf1;
 }
 form .text h3{
  color: #333;
@@ -93,4 +93,3 @@ form .text h3 a{
 form .text h3 a:hover{
   text-decoration: underline;
 }
- 
