@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Finance Mobile Application-UX/UI Design Screen One</title>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
-
-</head>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+   </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="screen-1">
-  <svg class="logo" xmlns="http://www.w3.org/2000/svg"
-       xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="100" viewbox="0 0 640 480" xml:space="preserve">
-
-  </svg>
-  <div class="email">
-    <label for="email">Имя пользователя</label>
-    <div class="sec-2">
-      <ion-icon name="mail-outline"></ion-icon>
-      <input type="email" name="email" placeholder="Username"/>
-    </div>
+  <div class="wrapper">
+    <h2>Регистрация</h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Введите имя пользователя" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Придумайте пароль" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Подтвердите пароль" required>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Зарегистрироваться">
+      </div>
+      <div class="text">
+      </div>
+    </form>
   </div>
-  <div class="password">
-    <label for="password">Пароль</label>
-    <div class="sec-2">
-      <ion-icon name="lock-closed-outline"></ion-icon>
-      <input class="pas" type="password" name="password" placeholder="············"/>
-      <ion-icon class="show-hide" name="eye-outline"></ion-icon>
-    </div>
-    <label for="password">Повторить пароль</label>
-    <div class="sec-2">
-      <ion-icon name="lock-closed-outline"></ion-icon>
-      <input class="pas" type="password" name="password" placeholder="············"/>
-      <ion-icon class="show-hide" name="eye-outline"></ion-icon>
-    </div>
-  </div>
-  <button class="login">Зарегистрироваться</button>
-</div>
-<!-- partial -->
 </body>
 </html>
