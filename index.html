@@ -67,6 +67,12 @@
      }
      
      if (valid == true){
+       let data={
+         user_name: user_name,
+         password: password,
+         repassword: repassword
+       }
+       tg.sendData(JSON.stringify(data));
        tg.close();
        return true;
      }
