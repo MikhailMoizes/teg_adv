@@ -68,9 +68,9 @@
      
      if (valid == true){
        let data={
-         user_name: user_name,
-         password: password,
-         repassword: repassword
+         user_name: document.form.user_name.value,
+         password: document.form.password.value,
+         repassword: document.form.repassword.value
        }
        tg.sendData(JSON.stringify(data));
        tg.close();
