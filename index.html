@@ -11,7 +11,7 @@
     <h2>Регистрация</h2>
     <form action="#">
       <div class="input-box">
-        <input type="text" placeholder="Введите имя пользователя" required>
+        <input type="text" placeholder="Введите имя пользователя" name="user_name" required>
       </div>
       <div class="input-box">
         <input type="password" placeholder="Придумайте пароль" required>
@@ -28,8 +28,23 @@
  <script>
      let tg = window.Telegram.WebApp;
      let reg = document.getElementByName("send_reg");
+     let user_name = document.getElementByName("user_name");
+     let password = document.getElementByName("password");
+     let repassword = document.getElementByName("repassword");
      reg.addEventListener("click", () => {
-         tg.close();
+          if (user_name.value.trim() === "") {
+            alert("Введите имя пользователя");
+            user_name.focus();
+          }
+          else if(password.value.trim() === "") {
+            alert("Введите пароль");
+            password.focus();
+          }
+          else if(repassword.value.trim() === "") {
+            alert("Повторите пароль");
+            repassword.focus();
+          }
+          else {tg.close();}
      }); 
  </script>            
 </body>
