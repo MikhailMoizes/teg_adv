@@ -16,7 +16,7 @@ body{
   position: relative;
   max-width: 430px;
   width: 100%;
-  background: #fff;
+  background: var(--tg-theme-bg-color);
   padding: 34px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -25,7 +25,7 @@ body{
   position: relative;
   font-size: 22px;
   font-weight: 600;
-  color: #333;
+  color: var(--tg-theme-text-color);
 }
 .wrapper h2::before{
   content: '';
@@ -72,14 +72,14 @@ form h3{
   margin-left: 10px;
 }
 .input-box.button input{
-  color: #fff;
+  color: var(--tg-theme-button-color);
   letter-spacing: 1px;
   border: none;
-  background: #4070f4;
+  background: var(--tg-theme-button-text-color);
   cursor: pointer;
 }
 .input-box.button input:hover{
-  background: #0e4bf1;
+  background: var(--tg-theme-secondary-bg-color);
 }
 form .text h3{
  color: #333;
