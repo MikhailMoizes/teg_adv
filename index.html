@@ -38,18 +38,34 @@
        document.getElementById("nameErr").innerHTML = "Введите имя пользователя";
        valid = false;
      }
+     else{
+       document.getElementById("nameErr").innerHTML = "";
+     }
+     
      if (document.form.password.value == "") {
        document.getElementById("passErr").innerHTML = "Введите пароль";
        valid = false;
      }
+     else{
+       document.getElementById("passErr").innerHTML = "";
+     }
+     
      if (document.form.repassword.value == "") {
        document.getElementById("repassErr").innerHTML = "Повторите пароль";
        valid = false;
      }
+     else{
+       document.getElementById("repassErr").innerHTML = "";
+     }
+     
      if (document.form.repassword.value != document.form.password.value) {
        document.getElementById("repassErr").innerHTML = "Пароли не совпадают";
        valid = false;
      }
+     else{
+       document.getElementById("repassErr").innerHTML = "";
+     }
+     
      if (valid == true){
        tg.close();
        return true;
