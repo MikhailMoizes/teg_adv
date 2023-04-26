@@ -20,14 +20,14 @@
         <input type="password" placeholder="Подтвердите пароль" required>
       </div>
       <div class="input-box button">
-        <input type="Submit"  value="Зарегистрироваться" id="send_reg">
+        <input type="Submit"  value="Зарегистрироваться"  name="send_reg">
       </div>
     </form>
   </div>
  <script src="https://telegram.org/js/telegram-web-app.js"></script>
  <script>
      let tg = window.Telegram.WebApp;
-     let reg = document.getElementById("send_reg");
+     let reg = document.getElementByName("send_reg");
      reg.addEventListener("click", () => {
          tg.close();
      }); 
