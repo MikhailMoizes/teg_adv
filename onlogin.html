@@ -16,15 +16,11 @@
         <div class="error" id="nameErr"></div>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Придумайте пароль"  name="password" >
+        <input type="password" placeholder="Введите пароль"  name="password" >
         <div class="error" id="passErr"></div>
       </div>
-      <div class="input-box">
-        <input type="password" placeholder="Подтвердите пароль"  name="repassword" >
-        <div class="error" id="repassErr"></div>
-      </div>
       <div class="input-box button">
-        <input type="Submit"  value="Зарегистрироваться"  name="send_reg">
+        <input type="Submit"  value="Войти"  name="login">
       </div>
     </form>
   </div>
@@ -48,29 +44,12 @@
      }
      else{
        document.getElementById("passErr").innerHTML = "";
-     }
-     
-     if (document.form.repassword.value == "") {
-       document.getElementById("repassErr").innerHTML = "Повторите пароль";
-       valid = false;
-     }
-     else{
-       document.getElementById("repassErr").innerHTML = "";
-     }
-     
-     if (document.form.repassword.value != document.form.password.value) {
-       document.getElementById("repassErr").innerHTML = "Пароли не совпадают";
-       valid = false;
-     }
-     else{
-       document.getElementById("repassErr").innerHTML = "";
-     }
+     }    
      
      if (valid == true){
        let data={
          user_name: document.form.user_name.value,
          password: document.form.password.value,
-         repassword: document.form.repassword.value
        }
        tg.sendData(JSON.stringify(data));
        tg.close();
